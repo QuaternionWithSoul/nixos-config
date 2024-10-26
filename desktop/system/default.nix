@@ -6,8 +6,6 @@
     ./hardware.nix
 
     ./boot
-    ./disk
-    ./microcode
     ./network
     ./nixpkgs
     ./services
