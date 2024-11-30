@@ -10,6 +10,7 @@
     ./fonts.nix
     ./langs.nix
     ./thunar.nix
+    ./tmux.nix
     ./xorg.nix
   ];
 
