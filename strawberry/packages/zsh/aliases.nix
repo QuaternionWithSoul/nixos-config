@@ -16,12 +16,16 @@ in {
     '';
 
     ll = "ls -l";
+
     fstf = "fastfetch";
     neof = "neofetch";
     nrdf = "nerdfetch";
     tft = "fet.sh";
     pft = "pfetch";
     clock = "tty-clock -cs -C 4";
+
     cle = "clear";
+    prf = "poweroff";
+    rbt = "reboot";
   };
 }
