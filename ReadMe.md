@@ -33,3 +33,11 @@ This repository contains my NixOS configuration managed with Flakes. It includes
 
 Replace `<host>` with your target host, e.g., `strawberry` or `blueberry`.
 
+
+ **Window Manager**  | Awesome
+:-------------------:|:---------:
+ **File Manager**    | Thunar
+ **Terminal**        | Alacritty
+ **Menu**            | Rofi
+ **Display Manager** | Sddm
+ **Shell**           | Zsh
