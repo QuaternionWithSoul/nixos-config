@@ -1,6 +1,6 @@
 { pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    prismlauncher-unwrapped
+    prismlauncher
 
     (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
