@@ -25,8 +25,6 @@
     notion
 
     nix-prefetch-git
-
-    xorg.xinit
     
     home-manager
     fastfetch
@@ -45,6 +43,7 @@
     lshw
     btop
     wget
+    tree
   ];
 
   programs = {
