@@ -21,6 +21,7 @@ Copy your hardware configuration:
    ```
 
 Update `flake.nix`:
+
    Replace `hostname` and `username` values with your own.
 
 Build and apply the NixOS configuration:
