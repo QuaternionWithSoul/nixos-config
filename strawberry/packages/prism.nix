@@ -11,7 +11,7 @@
           sha256 = "0fgm9w32jsi8cg1hddx7dban0vlj5dlq0limp3rcv3l86w83qgc1";
         };
       }
-    ).override {
+    )).override {
       additionalPrograms = [ ffmpeg ];
 
       jdks = [
@@ -20,6 +20,6 @@
         zulu17
         zulu
       ];
-    })
+    }
   ];
 }
