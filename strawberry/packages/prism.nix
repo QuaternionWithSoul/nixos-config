@@ -1,17 +1,20 @@
-{ pkgs, ... }: {
-  environment.systemPackages = with pkgs; [
+{ pkgs, ... }:
+let 
+  prismlauncher = pkgs.prismlauncher.overrideAttrs (
+    oldAttrs: rec {
+      src = pkgs.fetchFromGitHub {
+        owner = "Diegiwg";
+        repo = "PrismLauncher-Cracked";
+        rev = "752668e50f155b21cd6de6b05192e0010517da31";
+        sha256 = "0fgm9w32jsi8cg1hddx7dban0vlj5dlq0limp3rcv3l86w83qgc1";
+      };
+    }
+  );
+in {
+  environment.systemPackages = [
     prismlauncher
 
-    (prismlauncher.overrideAttrs (
-      oldAttrs: rec {
-        src = pkgs.fetchFromGitHub {
-          owner = "Diegiwg";
-          repo = "PrismLauncher-Cracked";
-          rev = "752668e50f155b21cd6de6b05192e0010517da31";
-          sha256 = "0fgm9w32jsi8cg1hddx7dban0vlj5dlq0limp3rcv3l86w83qgc1";
-        };
-      }
-    )).override {
+    (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
 
       jdks = [
@@ -20,6 +23,6 @@
         zulu17
         zulu
       ];
-    }
+    })
   ];
 }
