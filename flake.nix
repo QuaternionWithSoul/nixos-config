@@ -10,10 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked"
+    prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }:
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, prismlauncher, ... }:
   let
     hostName = "0N";
     userName = "n";
