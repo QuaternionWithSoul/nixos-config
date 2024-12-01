@@ -9,6 +9,7 @@
     ./doas.nix
     ./fonts.nix
     ./langs.nix
+    ./prism.nix
     ./thunar.nix
     ./tmux.nix
     ./xorg.nix
@@ -25,8 +26,6 @@
     notion
 
     nix-prefetch-git
-
-    prismlauncher-unwrapped
     
     home-manager
     fastfetch
