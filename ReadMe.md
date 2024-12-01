@@ -7,26 +7,30 @@ This repository contains my NixOS configuration managed with Flakes. It includes
 
 ## Installation
 
-1. Clone the repository:
+Clone the repository:
+
    ```bash
    git clone https://github.com/QuaternionWithSoul/nixos-config.git
    ```
 
-2. Copy your hardware configuration:
+Copy your hardware configuration:
+
    ```bash
    cd nixos-config
    cp /etc/nixos/hardware-configuration.nix ./hardware.nix
    ```
 
-3. Update `flake.nix`:
-   - Replace `hostname` and `username` values with your own.
+Update `flake.nix`:
+   Replace `hostname` and `username` values with your own.
 
-4. Build and apply the NixOS configuration:
+Build and apply the NixOS configuration:
+
    ```bash
    sudo nixos-rebuild switch --flake .#<host>
    ```
 
-5. Apply the home-manager configuration:
+Apply the home-manager configuration:
+
    ```bash
    home-manager switch --flake .#<host>
    ```
