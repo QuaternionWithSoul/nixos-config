@@ -13,26 +13,14 @@ Clone the repository:
 git clone https://github.com/QuaternionWithSoul/nixos-config.git
 ```
 
-Copy your hardware configuration:
-
-```bash
-cd nixos-config
-cp /etc/nixos/hardware-configuration.nix ./hardware.nix
-```
-
 Update `flake.nix`:
 
 - Replace `hostname` and `username` values with your own.
 
-Build and apply the NixOS configuration:
+Build and apply the NixOS and Home configuration:
 
 ```bash
-sudo nixos-rebuild switch --flake .#<host>
-```
-
-Apply the home-manager configuration:
-
-```bash
+sudo nixos-rebuild switch --flake .#<host>  --impure
 home-manager switch --flake .#<host>
 ```
 

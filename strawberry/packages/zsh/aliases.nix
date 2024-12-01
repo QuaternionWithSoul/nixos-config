@@ -3,16 +3,16 @@ let
   flakeDir = "~/nixos-config";
 in {
   programs.zsh.shellAliases = {
-    nix-rbld = "doas nixos-rebuild switch --flake ${flakeDir}#strawberry";
+    nix-rbld = "sudo nixos-rebuild switch --flake ${flakeDir}#strawberry --impure";
     home-rbld = "home-manager switch --flake ${flakeDir}#strawberry";
     flake-rbld = ''
-      doas nixos-rebuild switch --flake ${flakeDir}#strawberry &&
+      sudo nixos-rebuild switch --flake ${flakeDir}#strawberry --impure &&
       home-manager switch --flake ${flakeDir}#strawberry
     '';
     nix-cle = ''
       nix-collect-garbage --delete-old &&
-      doas nix-collect-garbage -d &&
-      doas /run/current-system/bin/switch-to-configuration boot
+      sudo nix-collect-garbage -d &&
+      sudo /run/current-system/bin/switch-to-configuration boot
     '';
 
     ll = "ls -l";

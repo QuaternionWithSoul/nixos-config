@@ -37,7 +37,7 @@
         ./strawberry/packages
         ./strawberry/system
 
-        ./hardware.nix
+        /etc/nixos/hardware-configuration.nix
       ];
     };
 
