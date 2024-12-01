@@ -22,7 +22,7 @@ cp /etc/nixos/hardware-configuration.nix ./hardware.nix
 
 Update `flake.nix`:
 
-Replace `hostname` and `username` values with your own.
+- Replace `hostname` and `username` values with your own.
 
 Build and apply the NixOS configuration:
 
