@@ -25,6 +25,8 @@
     notion
 
     nix-prefetch-git
+
+    prismlauncher-unwrapped
     
     home-manager
     fastfetch
