@@ -15,9 +15,9 @@ in {
     prismlauncher
 
     (prismlauncher.override {
-      additionalPrograms = [ ffmpeg ];
+      additionalPrograms = with pkgs; [ ffmpeg ];
 
-      jdks = [
+      jdks = with pkgs; [
         graalvm-ce
         zulu8
         zulu17
