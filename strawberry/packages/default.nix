@@ -9,7 +9,6 @@
     ./doas.nix
     ./fonts.nix
     ./langs.nix
-    ./prism.nix
     ./thunar.nix
     ./tmux.nix
     ./xorg.nix
