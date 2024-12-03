@@ -222,49 +222,6 @@ globalkeys = gears.table.join(
     ),
 )
 
-clientkeys = gears.table.join(
-    awful.key({ modkey, "Shift" }, "f",
-        function (c)
-            c.fullscreen = not c.fullscreen
-            c:raise()
-        end,
-        { description = "toggle fullscreen", group = "management" }
-    ),
-    awful.key({ modkey }, "q",
-        function (c)
-            c:kill()
-        end,
-        { description = "close", group = "management" }
-    ),
-    awful.key({ modkey }, "c",
-        function (c)
-            c.minimized = true
-        end ,
-        { description = "minimize", group = "management" }
-    ),
-    awful.key({ modkey }, "m",
-        function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end ,
-        { description = "(un)maximize", group = "management" }
-    ),
-    awful.key({ modkey, "Control" }, "m",
-        function (c)
-            c.maximized_vertical = not c.maximized_vertical
-            c:raise()
-        end ,
-        { description = "(un)maximize vertically", group = "management" }
-    ),
-    awful.key({ modkey, "Shift"   }, "m",
-        function (c)
-            c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end ,
-        { description = "(un)maximize horizontally", group = "management" }
-    )
-)
-
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         awful.key({ modkey }, "#" .. i + 9,
@@ -293,20 +250,6 @@ for i = 1, 9 do
     )
 end
 
-clientbuttons = gears.table.join(
-    awful.button({ }, 1, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-    end),
-    awful.button({ modkey }, 1, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-        awful.mouse.client.move(c)
-    end),
-    awful.button({ modkey }, 3, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-        awful.mouse.client.resize(c)
-    end)
-)
-
 root.keys(globalkeys)
 
 awful.rules.rules = {
@@ -317,8 +260,61 @@ awful.rules.rules = {
             border_color = beautiful.border_normal,
             focus = awful.client.focus.filter,
             raise = true,
-            keys = clientkeys,
-            buttons = clientbuttons,
+            keys = gears.table.join(
+                awful.key({ modkey, "Shift" }, "f",
+                    function (c)
+                        c.fullscreen = not c.fullscreen
+                        c:raise()
+                    end,
+                    { description = "toggle fullscreen", group = "management" }
+                ),
+                awful.key({ modkey }, "q",
+                    function (c)
+                        c:kill()
+                    end,
+                    { description = "close", group = "management" }
+                ),
+                awful.key({ modkey }, "c",
+                    function (c)
+                        c.minimized = true
+                    end ,
+                    { description = "minimize", group = "management" }
+                ),
+                awful.key({ modkey }, "m",
+                    function (c)
+                        c.maximized = not c.maximized
+                        c:raise()
+                    end ,
+                    { description = "(un)maximize", group = "management" }
+                ),
+                awful.key({ modkey, "Control" }, "m",
+                    function (c)
+                        c.maximized_vertical = not c.maximized_vertical
+                        c:raise()
+                    end ,
+                    { description = "(un)maximize vertically", group = "management" }
+                ),
+                awful.key({ modkey, "Shift"   }, "m",
+                    function (c)
+                        c.maximized_horizontal = not c.maximized_horizontal
+                        c:raise()
+                    end ,
+                    { description = "(un)maximize horizontally", group = "management" }
+                )
+            ),
+            buttons = gears.table.join(
+                awful.button({ }, 1, function (c)
+                    c:emit_signal("request::activate", "mouse_click", {raise = true})
+                end),
+                awful.button({ modkey }, 1, function (c)
+                    c:emit_signal("request::activate", "mouse_click", {raise = true})
+                    awful.mouse.client.move(c)
+                end),
+                awful.button({ modkey }, 3, function (c)
+                    c:emit_signal("request::activate", "mouse_click", {raise = true})
+                    awful.mouse.client.resize(c)
+                end)
+            ),
             screen = awful.screen.preferred,
             placement = awful.placement.no_overlap+awful.placement.no_offscreen
         }
@@ -420,5 +416,10 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("focus", function(c)
+    c.border_color = beautiful.border_focus
+end)
+
+client.connect_signal("unfocus", function(c)
+    c.border_color = beautiful.border_normal
+end)
