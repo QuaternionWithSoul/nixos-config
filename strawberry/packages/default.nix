@@ -23,6 +23,7 @@
     vlc
     obsidian
     notion
+    mindustry
 
     (import ./tlauncher { inherit pkgs; })
 

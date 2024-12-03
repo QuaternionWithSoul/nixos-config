@@ -1,5 +1,8 @@
 { pkgs }: pkgs.stdenv.mkDerivation {
-  name = "my-sddm-theme";
+  pname = "my-sddm-theme";
+  version = "1.0";
+
+  dontBuild = true;
 
   src = pkgs.fetchFromGitHub {
     owner = "Keyitdev";
@@ -9,7 +12,7 @@
   };
 
   installPhase = ''
-    mkdir -p $out
-    cp -R ./* $out/
+    mkdir -p $out/share/sddm/themes/my-sddm-theme
+    cp -r ./* $out/share/sddm/themes/my-sddm-theme/
   '';
 }

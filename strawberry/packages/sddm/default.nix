@@ -1,6 +1,7 @@
 { pkgs, ... }: {
-  environment.systemPackages = with pkgs.libsForQt5.qt5; [
-    qtgraphicaleffects
+  environment.systemPackages = with pkgs; [
+    (callPackage ./theming.nix{})
+    libsForQt5.qt5.qtgraphicaleffects
   ];
 
   services.displayManager = {
@@ -8,7 +9,7 @@
 
     sddm = {
       enable = true;
-      theme = "${import ./theming.nix { inherit pkgs; }}";
+      theme = "my-sddm-theme";
     };
   };
 }
