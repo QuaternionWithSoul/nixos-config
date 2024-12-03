@@ -18,7 +18,6 @@ if awesome.startup_errors then
     })
 end
 
-
 do
     local in_error = false
     awesome.connect_signal("debug::error", function (err)
@@ -40,6 +39,8 @@ end
 
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
+beautiful.wallpaper = "~/.config/awesome/public/wallpaper.png"
+
 modkey = "Mod4"
 
 awful.layout.layouts = {
@@ -60,8 +61,6 @@ end
 
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
-
-    gears.wallpaper.maximized("/home/n/.config/awesome/public/wallpaper.png", s, true)
 
     awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
 
