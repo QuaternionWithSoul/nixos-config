@@ -61,7 +61,7 @@ end
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
-    gears.wallpaper.maximized("./public/wallpaper.png", s, true)
+    gears.wallpaper.maximized("/home/n/.config/awesome/public/wallpaper.png", s, true)
 
     awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
 
