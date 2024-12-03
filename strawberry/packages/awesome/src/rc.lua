@@ -61,6 +61,8 @@ end
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
+    gears.wallpaper.maximized("./public/wallpaper.png", s, true)
+
     awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
 
     s.mypromptbox = awful.widget.prompt()
@@ -205,9 +207,22 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey }, "r",
         function ()
-            awful.spawn("rofi -show drun")
+            awful.spawn("rofi -show drun || pkill rofi")
         end,
         { description = "open a rofi", group = "soft" }
+    ),
+
+    awful.key({ }, "Print",
+        function()
+            awful.spawn("scrot ~/ScreenShot/%Y-%m-%d_%H-%M-%S.png")
+        end,
+        {description = "screenshot of the entire screen", group = "screen"}
+    ),
+    awful.key({ modkey }, "Print",
+        function()
+            awful.spawn("scrot ~/ScreenShot/%Y-%m-%d_%H-%M-%S.png -s")
+        end,
+        {description = "screenshot of screen area", group = "screen"}
     ),
 
 
