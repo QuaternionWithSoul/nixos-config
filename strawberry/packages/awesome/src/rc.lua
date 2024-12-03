@@ -42,14 +42,52 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 terminal = "alacritty"
+rofi = "rofi -show drun"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 modkey = "Mod4"
 
 awful.layout.layouts = {
-    awful.layout.suit.tile
+    awful.layout.suit.floating,
+    awful.layout.suit.tile,
+    awful.layout.suit.tile.left,
+    awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.top,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.spiral,
+    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.max,
+    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.magnifier,
+    awful.layout.suit.corner.nw
 }
+
+myawesomemenu = {
+    { "hotkeys", function()
+        hotkeys_popup.show_help(nil, awful.screen.focused())
+    end },
+    { "manual", terminal .. " -e man awesome" },
+    { "edit config", editor_cmd .. " " .. awesome.conffile },
+    { "restart", awesome.restart },
+    { "quit", function()
+        awesome.quit()
+    end }
+}
+
+mymainmenu = awful.menu({
+    items = {
+        { "awesome", myawesomemenu, beautiful.awesome_icon },
+        { "open terminal", terminal },
+        { "rofi", rofi }
+    }
+})
+
+mylauncher = awful.widget.launcher({
+    image = beautiful.awesome_icon,
+    menu = mymainmenu
+})
 
 menubar.utils.terminal = terminal
 
@@ -163,6 +201,7 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         {
             layout = wibox.layout.fixed.horizontal,
+            mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
@@ -179,6 +218,9 @@ end)
 
 root.buttons(
     gears.table.join(
+        awful.button({ }, 3, function ()
+            mymainmenu:toggle()
+        end),
         awful.button({ }, 4, awful.tag.viewnext),
         awful.button({ }, 5, awful.tag.viewprev)
     )
@@ -212,6 +254,12 @@ globalkeys = gears.table.join(
             awful.client.focus.byidx(-1)
         end,
         {description = "focus previous by index", group = "client"}
+    ),
+    awful.key({ modkey }, "w",
+        function ()
+            mymainmenu:show()
+        end,
+        { description = "show main menu", group = "awesome" }
     ),
     awful.key({ modkey, "Shift" }, "j",
         function ()
@@ -321,7 +369,7 @@ globalkeys = gears.table.join(
         end,
         { description = "restore minimized", group = "client" }
     ),
-    awful.key({ modkey }, "p",
+    awful.key({ modkey }, "r",
         function ()
             awful.screen.focused().mypromptbox:run()
         end,
@@ -338,7 +386,7 @@ globalkeys = gears.table.join(
         end,
         { description = "lua execute prompt", group = "awesome" }
     ),
-    awful.key({ modkey }, "r",
+    awful.key({ modkey }, "p",
         function()
             menubar.show()
         end,
