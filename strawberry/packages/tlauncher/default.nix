@@ -2,10 +2,14 @@
   pname = "tlauncher";
   version = "1.0";
 
-  src = ./tlauncher.jar;
+  src = ./src/tlauncher.jar;
 
-  nativeBuildInputs = [ pkgs.jdk8 ];
-  buildInputs = [ pkgs.jre8_headless pkgs.java8OpenJfx ];
+  buildInputs = with pkgs; [
+    jdk8
+    jre8
+    jre8_headless
+    openjfx17
+  ];
 
   installPhase = ''
     mkdir -p $out/bin
