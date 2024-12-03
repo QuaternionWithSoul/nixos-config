@@ -185,6 +185,16 @@ globalkeys = gears.table.join(
         end,
         { description = "go back", group = "management" }
     ),
+    awful.key({ modkey, "Control" }, "n",
+        function ()
+            local c = awful.client.restore()
+            
+            if c then
+                c:emit_signal("request::activate", "key.unminimize", {raise = true})
+            end
+        end,
+        { description = "restore minimized", group = "management" }
+    ),
 
 
     awful.key({ modkey }, "Return",
@@ -208,18 +218,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "q",
         awesome.quit,
         { description = "quit awesome", group = "awesome" }
-    ),
-    
-    awful.key({ modkey, "Control" }, "n",
-        function ()
-            local c = awful.client.restore()
-            
-            if c then
-                c:emit_signal("request::activate", "key.unminimize", {raise = true})
-            end
-        end,
-        { description = "restore minimized", group = "management" }
-    ),
+    )
 )
 
 for i = 1, 9 do
