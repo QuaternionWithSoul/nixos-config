@@ -25,7 +25,6 @@
     notion
 
     nix-prefetch-git
-    
     home-manager
     fastfetch
     neofetch
@@ -44,6 +43,7 @@
     btop
     wget
     tree
+    openjdk
   ];
 
   programs = {
