@@ -17,14 +17,16 @@
     google-chrome
     vscode
     discord
+    vesktop
     figma-linux
-    blender-hip
+    blender
     vlc
     obsidian
     notion
     mindustry
     aseprite
     obs-studio
+    vesktop
 
     (import ./tlauncher { inherit pkgs; })
 
