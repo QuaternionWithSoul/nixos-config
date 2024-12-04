@@ -206,22 +206,65 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey }, "r",
         function ()
-            awful.spawn("rofi -show drun || pkill rofi")
+            awful.spawn("pkill rofi || rofi -show drun")
         end,
         { description = "open a rofi", group = "soft" }
     ),
+    awful.key({ modkey }, "v",
+        function ()
+            awful.spawn("cliphist list | rofi -dmenu | cliphist decode | wl-copy")
+        end,
+        { description = "open a rofi-bufer", group = "soft" }
+    ),
+    
 
     awful.key({ }, "Print",
         function()
             awful.spawn("scrot ~/ScreenShot/%Y-%m-%d_%H-%M-%S.png")
         end,
-        {description = "screenshot of the entire screen", group = "screen"}
+        {description = "screenshot of the entire screen", group = "funcs"}
     ),
     awful.key({ modkey }, "Print",
         function()
             awful.spawn("scrot ~/ScreenShot/%Y-%m-%d_%H-%M-%S.png -s")
         end,
-        {description = "screenshot of screen area", group = "screen"}
+        {description = "screenshot of screen area", group = "funcs"}
+    ),
+    awful.key({ }, "F3",
+        function()
+            awful.spawn("brightnessctl -d *::kbd_backlight set 10%-")
+        end,
+        {description = "turn down the volume", group = "funcs"}
+    ),
+    awful.key({ }, "F4",
+        function()
+            awful.spawn("brightnessctl -d *::kbd_backlight set +10%")
+        end,
+        {description = "increase volume", group = "funcs"}
+    ),
+    awful.key({ }, "F5",
+        function()
+            awful.spawn("brightnessctl set 10%-")
+        end,
+        {description = "reduce brightness", group = "funcs"}
+    ),
+    awful.key({ }, "F6",
+        function()
+            awful.spawn("brightnessctl set +10%")
+        end,
+        {description = "increase brightness", group = "funcs"}
+    ),
+    awful.key({ }, "F11",
+        function()
+            awful.spawn("pamixer -d 10")
+        end,
+        {description = "turn down the volume", group = "funcs"}
+    ),
+    awful.key({ }, "F12",
+        function()
+            awful.spawn("pamixer -i 10")
+        end,
+        {description = "increase volume", group = "funcs"}
     ),
 
 
