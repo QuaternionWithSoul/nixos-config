@@ -1,6 +1,7 @@
 { hostName, systemVersion, timeZone, pkgs, ... }: {
   imports = [
-    ./services/audio.nix
+    ./audio/pipewire.nix
+
     ./services/bluetooth.nix
     ./services/samba.nix
     ./services/ssh.nix
