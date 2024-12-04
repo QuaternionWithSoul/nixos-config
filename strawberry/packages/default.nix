@@ -48,6 +48,16 @@
     tree
     openjdk
     lshw
+    
+    clang
+    cmake
+    ninja
+    libcxx
+    libcxxabi
+    zlib
+    libpng
+    freetype
+    harfbuzz
   ];
 
   programs = {
