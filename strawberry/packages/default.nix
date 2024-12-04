@@ -47,6 +47,7 @@
     wget
     tree
     openjdk
+    lshw
   ];
 
   programs = {
