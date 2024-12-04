@@ -24,6 +24,7 @@
     obsidian
     notion
     mindustry
+    aseprite
 
     (import ./tlauncher { inherit pkgs; })
 
@@ -48,15 +49,6 @@
     tree
     openjdk
     lshw
-    
-    clang
-    cmake
-    ninja
-    libcxx
-    zlib
-    libpng
-    freetype
-    harfbuzz
   ];
 
   programs = {
