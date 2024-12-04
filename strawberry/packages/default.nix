@@ -53,7 +53,6 @@
     cmake
     ninja
     libcxx
-    libcxxabi
     zlib
     libpng
     freetype
