@@ -12,7 +12,7 @@
   };
 
   installPhase = ''
-    mkdir -p $out/share/sddm/themes/my-sddm-theme
-    cp -r ./* $out/share/sddm/themes/my-sddm-theme/
+    mkdir -p $out/share/sddm/themes
+    cp -aR $src $out/share/sddm/themes/my-sddm-theme
   '';
 }
