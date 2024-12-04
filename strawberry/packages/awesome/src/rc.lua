@@ -39,7 +39,7 @@ end
 
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
-beautiful.wallpaper = "~/.config/awesome/public/wallpaper.png"
+beautiful.wallpaper = "home/n/.config/awesome/public/wallpaper.png"
 
 modkey = "Mod4"
 
