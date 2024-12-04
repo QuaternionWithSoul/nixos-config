@@ -49,6 +49,7 @@
     tree
     openjdk
     lshw
+    cava
   ];
 
   programs = {
