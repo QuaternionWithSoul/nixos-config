@@ -24,6 +24,7 @@
     notion
     mindustry
     aseprite
+    obs-studio
 
     (import ./tlauncher { inherit pkgs; })
 
