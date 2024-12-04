@@ -2,7 +2,7 @@
   services.xserver = {
     enable = true;
 
-    dpi = 96;
+    dpi = 92;
     
     xkb = {
       layout = "us,ru";
