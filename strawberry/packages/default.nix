@@ -28,8 +28,6 @@
     obs-studio
     vesktop
 
-    (import ./tlauncher { inherit pkgs; })
-
     nix-prefetch-git
     home-manager
     fastfetch
