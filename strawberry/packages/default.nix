@@ -13,8 +13,6 @@
     ./xorg.nix
   ];
 
-  nixpkgs.overlays = [ prismlauncher.overlays.default ];
-
   environment.systemPackages = with pkgs; [
     google-chrome
     vscode
@@ -29,7 +27,10 @@
     aseprite
     obs-studio
     vesktop
-    prismlauncher
+    
+    (import (
+      builtins.fetchTarball "https://github.com/PrismLauncher/PrismLauncher/archive/develop.tar.gz"
+    )).packages.${pkgs.system}.prismlauncher
 
     nix-prefetch-git
     home-manager

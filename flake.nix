@@ -9,14 +9,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    prismlauncher = {
-      url = "github:Diegiwg/PrismLauncher-Cracked";
-      # inputs.flake-compat.follows = "";
-    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, prismlauncher, ... }:
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }:
   let
     hostName = "0N";
     userName = "n";
@@ -35,7 +30,7 @@
   in {
     nixosConfigurations.strawberry = nixpkgs.lib.nixosSystem {
       specialArgs = {
-        inherit hostName userName systemVersion timeZone pkgs-stable prismlauncher;
+        inherit hostName userName systemVersion timeZone pkgs-stable;
       };
 
       modules = [
