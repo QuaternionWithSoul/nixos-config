@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ pkgs, prismlauncher, ...}: {
   imports = [
     ./alacritty
     ./awesome
@@ -12,6 +12,8 @@
     ./tmux.nix
     ./xorg.nix
   ];
+
+  nixpkgs.overlays = [ prismlauncher.overlays.default ];
 
   environment.systemPackages = with pkgs; [
     google-chrome
@@ -27,6 +29,7 @@
     aseprite
     obs-studio
     vesktop
+    prismlauncher
 
     nix-prefetch-git
     home-manager
@@ -50,10 +53,6 @@
     openjdk
     lshw
     cava
-    jdk8
-    jre8
-    jre8_headless
-    openjfx17
   ];
 
   programs = {
