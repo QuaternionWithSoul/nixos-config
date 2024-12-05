@@ -4,7 +4,6 @@
     brightnessctl
     scrot
     rofi
-    clipcat
   ];
 
   services = {
