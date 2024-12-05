@@ -44,7 +44,7 @@ port = 45047
 enable = true
 icon = "accessories-clipboard"
 timeout_ms = 2000
-long_plaintext_length = 2000"
+long_plaintext_length = 2000
   '';
 
   home.file.".config/clipcat/clipcatctl.toml".text = ''
