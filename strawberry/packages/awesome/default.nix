@@ -4,9 +4,14 @@
     brightnessctl
     scrot
     rofi
-    wl-clipboard
-    cliphist
+    clipcat
   ];
 
-  services.xserver.windowManager.awesome.enable = true;
+  services = {
+    xserver.windowManager = {
+      awesome.enable = true;
+    };
+    
+    clipcat.enable = true;
+  };
 }

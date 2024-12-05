@@ -206,27 +206,27 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey }, "r",
         function ()
-            awful.spawn("pkill rofi || rofi -show drun")
+            awful.spawn("rofi -show drun")
         end,
         { description = "open a rofi", group = "soft" }
     ),
     awful.key({ modkey }, "v",
         function ()
-            awful.spawn("cliphist list | rofi -dmenu | cliphist decode | wl-copy")
+            awful.spawn("clipcat-menu")
         end,
-        { description = "open a rofi-bufer", group = "soft" }
+        { description = "open a clipcat-menu", group = "soft" }
     ),
     
 
     awful.key({ }, "Print",
         function()
-            awful.spawn("scrot ~/ScreenShot/%Y-%m-%d_%H-%M-%S.png")
+            awful.spawn("scrot ~/ScreenShots/%Y-%m-%d_%H-%M-%S.png")
         end,
         {description = "screenshot of the entire screen", group = "funcs"}
     ),
     awful.key({ modkey }, "Print",
         function()
-            awful.spawn("scrot ~/ScreenShot/%Y-%m-%d_%H-%M-%S.png -s")
+            awful.spawn("scrot ~/ScreenShots/%Y-%m-%d_%H-%M-%S.png -s")
         end,
         {description = "screenshot of screen area", group = "funcs"}
     ),
@@ -253,6 +253,12 @@ globalkeys = gears.table.join(
             awful.spawn("brightnessctl set +10%")
         end,
         {description = "increase brightness", group = "funcs"}
+    ),
+    awful.key({ }, "F10",
+        function()
+            awful.spawn("pamixer --default-source -m")
+        end,
+        {description = "turn down the volume", group = "funcs"}
     ),
     awful.key({ }, "F11",
         function()
@@ -479,3 +485,4 @@ end)
 client.connect_signal("unfocus", function(c)
     c.border_color = beautiful.border_normal
 end)
+
