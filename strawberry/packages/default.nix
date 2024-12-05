@@ -1,4 +1,4 @@
-{ pkgs, prismlauncher, ...}: {
+{ pkgs, ...}: {
   imports = [
     ./alacritty
     ./awesome
@@ -8,15 +8,10 @@
     ./doas.nix
     ./fonts.nix
     ./langs.nix
+    ./prism.nix
     ./thunar.nix
     ./tmux.nix
     ./xorg.nix
-  ];
-
-  nixpkgs.overlays = [
-    (import (
-      builtins.fetchTarball "https://github.com/Diegiwg/PrismLauncher-Cracked/archive/develop.tar.gz"
-    )).overlays.default
   ];
 
   environment.systemPackages = with pkgs; [
@@ -33,7 +28,6 @@
     aseprite
     obs-studio
     vesktop
-    prismlauncher
 
     nix-prefetch-git
     home-manager
