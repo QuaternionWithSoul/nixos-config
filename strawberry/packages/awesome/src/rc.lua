@@ -60,7 +60,7 @@ end
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
-    gears.wallpaper.maximized("/home/n/.config/awesome/public/wallpaper.png", s, true)
+    gears.wallpaper.maximized("~/.config/awesome/public/wallpaper.png", s, true)
 
     awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
 
@@ -254,11 +254,17 @@ globalkeys = gears.table.join(
         end,
         {description = "increase brightness", group = "funcs"}
     ),
-    awful.key({ }, "F10",
+    awful.key({ modkey }, "F11",
         function()
             awful.spawn("pamixer --default-source -m")
         end,
-        {description = "turn down the volume", group = "funcs"}
+        {description = "mute microphone", group = "funcs"}
+    ),
+    awful.key({ modkey }, "F12",
+        function()
+            awful.spawn("pamixer --default-source -u")
+        end,
+        {description = "unmute microphone", group = "funcs"}
     ),
     awful.key({ }, "F11",
         function()
