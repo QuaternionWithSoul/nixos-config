@@ -52,6 +52,10 @@
     openjdk
     lshw
     cava
+    jdk8
+    jre8
+    jre8_headless
+    openjfx17
   ];
 
   programs = {
