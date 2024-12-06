@@ -1,3 +1,3 @@
 { ... }: {
-  home.file.".local/share/rofi/themes".source = ./src/themes;
+  programs.rofi.configPath = ./src/config.rasi;
 }
