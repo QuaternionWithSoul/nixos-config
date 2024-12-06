@@ -9,10 +9,10 @@ local theme = {}
 
 theme.font          = "sans 8"
 
-theme.bg_normal     = "#11111b"
-theme.bg_focus      = "#45475a"
-theme.bg_urgent     = "#f38ba8"
-theme.bg_minimize   = "#313244"
+theme.bg_normal     = "#181926"
+theme.bg_focus      = "#494d64"
+theme.bg_urgent     = "#ed8796"
+theme.bg_minimize   = "#363a4f"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
@@ -22,9 +22,9 @@ theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(1)
-theme.border_normal = "#11111b"
-theme.border_focus  = "#45475a"
-theme.border_marked = "#f38ba8"
+theme.border_normal = "#181926"
+theme.border_focus  = "#494d64"
+theme.border_marked = "#ed8796"
 
 local taglist_square_size = dpi(4)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
