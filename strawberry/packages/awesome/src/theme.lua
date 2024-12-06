@@ -9,7 +9,7 @@ local theme = {}
 
 
 color1 = "#171717"
-color2 = "#3f3946"
+color2 = "#3f3b45"
 color3 = "#908caa"
 red = "#eb6f92"
 
