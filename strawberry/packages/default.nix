@@ -52,6 +52,7 @@
     lshw
     cava
     nixpkgs-fmt
+    xcolor
   ];
 
   programs = {
