@@ -9,11 +9,11 @@ local theme = {}
 
 theme.font          = "sans 8"
 
-theme.bg_normal     = "#181926"
+theme.bg_normal     = "#363a4f" ---#181926---
 theme.bg_focus      = "#494d64"
 theme.bg_urgent     = "#ed8796"
 theme.bg_minimize   = "#363a4f"
-theme.bg_systray    = "#181926"
+theme.bg_systray    = "#363a4f" ---#181926---
 
 theme.fg_normal     = "#a5adcb"
 theme.fg_focus      = "#cad3f5"
@@ -22,7 +22,7 @@ theme.fg_minimize   = "#cad3f5"
 
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(1)
-theme.border_normal = "#181926"
+theme.border_normal = "#363a4f" ---#181926---
 theme.border_focus  = "#494d64"
 theme.border_marked = "#ed8796"
 
