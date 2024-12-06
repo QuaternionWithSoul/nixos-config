@@ -8,10 +8,10 @@ local themes_path = gfs.get_themes_dir()
 local theme = {}
 
 
-color1 = "#191724"
-color2 = "#c4a7e7"
-color3 = "#6e6a86"
-red = "#ebbcba"
+color1 = "#171717"
+color2 = "#3f3946"
+color3 = "#908caa"
+red = "#eb6f92"
 
 
 theme.font          = "sans 8"
