@@ -51,6 +51,7 @@
     openjdk
     lshw
     cava
+    nixpkgs-fmt
   ];
 
   programs = {
