@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   programs.rofi = {
-    configPath = ./src/config.rasi;
+    theme = ./src/theme.rasi;
     terminal = pkgs.alacritty;
   };
 }
