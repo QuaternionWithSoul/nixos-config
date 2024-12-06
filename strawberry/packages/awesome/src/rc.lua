@@ -41,6 +41,8 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 modkey = "Mod4"
 
+home = gears.filesystem.get_dir("home")
+
 awful.layout.layouts = {
     awful.layout.suit.tile,
 }
@@ -60,7 +62,7 @@ end
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
-    gears.wallpaper.maximized("/home/n/.config/awesome/public/wallpaper.png", s, true)
+    gears.wallpaper.maximized(gears.filesystem.get_configuration_dir() .. "public/wallpaper.png", s, true)
 
     awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
 
@@ -220,13 +222,13 @@ globalkeys = gears.table.join(
 
     awful.key({ }, "Print",
         function()
-            awful.spawn("scrot /home/n/ScreenShots/%Y-%m-%d_%H-%M-%S.png")
+            awful.spawn("scrot " .. home .. "ScreenShots/%Y-%m-%d_%H-%M-%S.png")
         end,
         {description = "screenshot of the entire screen", group = "funcs"}
     ),
     awful.key({ modkey }, "Print",
         function()
-            awful.spawn("scrot /home/n/ScreenShots/%Y-%m-%d_%H-%M-%S.png -s")
+            awful.spawn("scrot " .. home .. "ScreenShots/%Y-%m-%d_%H-%M-%S.png -s")
         end,
         {description = "screenshot of screen area", group = "funcs"}
     ),
