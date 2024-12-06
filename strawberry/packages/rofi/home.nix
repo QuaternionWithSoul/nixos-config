@@ -1,6 +1,7 @@
 { pkgs, ... }: {
+  home.file.".local/share/rofi/themes".source = ./src;
+
   programs.rofi = {
-    theme = ./src/theme.rasi;
     terminal = pkgs.alacritty;
   };
 }
