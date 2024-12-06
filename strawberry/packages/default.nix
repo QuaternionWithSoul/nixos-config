@@ -2,6 +2,8 @@
   imports = [
     ./alacritty
     ./awesome
+    ./clipcat
+    ./rofi
     ./sddm
     ./zsh
 

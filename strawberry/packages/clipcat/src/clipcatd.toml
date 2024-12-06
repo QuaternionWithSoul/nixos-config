@@ -1,5 +1,3 @@
-{ ... }: {
-  home.file.".config/clipcat/clipcatd.toml".text = ''
 daemonize = true
 pid_file = "/run/user/1000/clipcatd.pid"
 primary_threshold_ms = 5000
@@ -45,50 +43,3 @@ enable = true
 icon = "accessories-clipboard"
 timeout_ms = 2000
 long_plaintext_length = 2000
-  '';
-
-  home.file.".config/clipcat/clipcatctl.toml".text = ''
-server_endpoint = "/run/user/1000/clipcat/grpc.sock"
-preview_length = 100
-
-[log]
-emit_journald = true
-emit_stdout = false
-emit_stderr = false
-level = "INFO"
-  '';
-
-  home.file.".config/clipcat/clipcat-menu.toml".text = ''
-server_endpoint = "/run/user/1000/clipcat/grpc.sock"
-finder = "rofi"
-preview_length = 80
-
-[rofi]
-line_length = 100
-menu_length = 30
-menu_prompt = "Clipcat"
-extra_arguments = []
-
-[dmenu]
-line_length = 100
-menu_length = 30
-menu_prompt = "Clipcat"
-extra_arguments = []
-
-[choose]
-line_length = 100
-menu_length = 30
-menu_prompt = "Clipcat"
-extra_arguments = []
-
-[custom_finder]
-program = "fzf"
-args = []
-
-[log]
-emit_journald = true
-emit_stdout = false
-emit_stderr = false
-level = "INFO"
-  '';
-}

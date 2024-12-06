@@ -3,14 +3,7 @@
     pamixer
     brightnessctl
     scrot
-    rofi
   ];
 
-  services = {
-    xserver.windowManager = {
-      awesome.enable = true;
-    };
-    
-    clipcat.enable = true;
-  };
+  services.xserver.windowManager.awesome.enable = true;
 }
