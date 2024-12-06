@@ -7,13 +7,20 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
+
+color1 = "#191724"
+color2 = "#c4a7e7"
+color3 = "#6e6a86"
+red = "#ebbcba"
+
+
 theme.font          = "sans 8"
 
-theme.bg_normal     = "#181926"
-theme.bg_focus      = "#494d64"
-theme.bg_urgent     = "#ed8796"
-theme.bg_minimize   = "#363a4f"
-theme.bg_systray    = theme.bg_normal
+theme.bg_normal     = color1
+theme.bg_focus      = color2
+theme.bg_urgent     = red
+theme.bg_minimize   = color3
+theme.bg_systray    = color1
 
 theme.fg_normal     = "#aaaaaa"
 theme.fg_focus      = "#ffffff"
@@ -22,9 +29,9 @@ theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(1)
-theme.border_normal = "#181926"
-theme.border_focus  = "#494d64"
-theme.border_marked = "#ed8796"
+theme.border_normal = color1
+theme.border_focus  = color2
+theme.border_marked = color3
 
 local taglist_square_size = dpi(4)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
