@@ -220,13 +220,13 @@ globalkeys = gears.table.join(
 
     awful.key({ }, "Print",
         function()
-            awful.spawn("scrot ~/ScreenShots/%Y-%m-%d_%H-%M-%S.png")
+            awful.spawn("scrot /home/n/ScreenShots/%Y-%m-%d_%H-%M-%S.png")
         end,
         {description = "screenshot of the entire screen", group = "funcs"}
     ),
     awful.key({ modkey }, "Print",
         function()
-            awful.spawn("scrot ~/ScreenShots/%Y-%m-%d_%H-%M-%S.png -s")
+            awful.spawn("scrot /home/n/ScreenShots/%Y-%m-%d_%H-%M-%S.png -s")
         end,
         {description = "screenshot of screen area", group = "funcs"}
     ),
