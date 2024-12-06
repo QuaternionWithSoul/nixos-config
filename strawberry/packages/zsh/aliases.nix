@@ -22,7 +22,7 @@ in {
     nrdf = "nerdfetch";
     tft = "fet.sh";
     pft = "pfetch";
-    clock = "tty-clock -cs -C 4";
+    clock = "tty-clock -cs -C 5";
 
     cle = "clear";
     pwrf = "poweroff";
