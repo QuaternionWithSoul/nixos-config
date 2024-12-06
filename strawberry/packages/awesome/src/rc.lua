@@ -37,7 +37,7 @@ do
     end)
 end
 
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
 
 modkey = "Mod4"
 
@@ -59,8 +59,6 @@ end
 
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
-
-    gears.wallpaper.maximized(gears.filesystem.get_configuration_dir() .. "public/wallpaper.png", s, true)
 
     awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
 
