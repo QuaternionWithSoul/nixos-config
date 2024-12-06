@@ -3,6 +3,4 @@
     source = ./src;
     recursive = true;
   };
-
-  imports = [ ./clipcat.nix ];
 }
