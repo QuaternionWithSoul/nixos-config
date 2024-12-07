@@ -13,6 +13,8 @@
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }:
   let
+    hardware = /etc/nixos/hardware-configuration.nix;
+
     hostName = "0N";
     userName = "n";
 
@@ -37,7 +39,7 @@
         ./strawberry/packages
         ./strawberry/system
 
-        /etc/nixos/hardware-configuration.nix
+        hardware
       ];
     };
 
@@ -50,6 +52,32 @@
       
       modules = [
         ./strawberry/home.nix
+      ];
+    };
+
+
+
+    nixosConfigurations.blueberry = nixpkgs.lib.nixosSystem {
+      specialArgs = {
+        inherit hostName userName systemVersion timeZone pkgs-stable;
+      };
+
+      modules = [
+        ./blueberry
+
+        hardware
+      ];
+    };
+
+    homeConfigurations.blueberry = home-manager.lib.homeManagerConfiguration {
+      extraSpecialArgs = {
+        inherit userName homeVersion pkgs-stable;
+      };
+
+      pkgs = nixpkgs.legacyPackages.${system};
+      
+      modules = [
+        ./blueberry/home.nix
       ];
     };
   };
