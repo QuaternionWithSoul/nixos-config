@@ -26,7 +26,7 @@ home-manager switch --flake .#<host>
 
 Replace `<host>` with your target host, e.g., `strawberry` or `blueberry`.
 
-## Env
+## Strawberry 🍓
 
  **Window Manager**  | Awesome
 :-------------------:|:---------:
@@ -35,3 +35,11 @@ Replace `<host>` with your target host, e.g., `strawberry` or `blueberry`.
  **Menu**            | Rofi
  **Display Manager** | Sddm
  **Shell**           | Zsh
+ **Audio**           | Pipewire
+ **Video**           | Nvidia
+
+### Services
+
+- bluetooth
+- ssh
+- clipcat
