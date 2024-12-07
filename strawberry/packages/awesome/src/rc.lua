@@ -228,13 +228,6 @@ globalkeys = gears.table.join(
         end,
         {description = "screenshot of screen area", group = "media"}
     ),
-    awful.key({ modkey }, "P",
-        function()
-            awful.spawn("pkill -f 'rec'")
-            awful.spawn("rec")
-        end,
-        {description = "start my rec sript", group = "media"}
-    ),
     awful.key({ }, "F3",
         function()
             awful.spawn("brightnessctl -d *::kbd_backlight set 10%-")
