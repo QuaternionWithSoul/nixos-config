@@ -228,7 +228,7 @@ globalkeys = gears.table.join(
         end,
         {description = "screenshot of screen area", group = "media"}
     ),
-    awful.key({ modkey, "Control" }, "Print",
+    awful.key({ modkey }, "P",
         function()
             awful.spawn("pkill -f 'rec'; rec")
         end,
