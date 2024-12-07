@@ -43,3 +43,6 @@ Replace `<host>` with your target host, e.g., `strawberry` or `blueberry`.
 - bluetooth
 - ssh
 - clipcat
+
+<br>
+![Screenshot](./pulic/strawberrypng)
