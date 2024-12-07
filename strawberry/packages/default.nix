@@ -3,6 +3,7 @@
     ./alacritty
     ./awesome
     ./clipcat
+    ./rec
     ./rofi
     ./sddm
     ./zsh
