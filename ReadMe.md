@@ -45,4 +45,5 @@ Replace `<host>` with your target host, e.g., `strawberry` or `blueberry`.
 - clipcat
 
 <br>
-![strawberry](./pulic/strawberry.png)
+
+![Screenshot](./pulic/strawberry.png)
