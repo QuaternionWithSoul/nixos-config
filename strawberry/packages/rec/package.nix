@@ -1,4 +1,4 @@
-{ }: stdenv.mkDerivation {
+{ stdenv }: stdenv.mkDerivation {
   pname = "rec";
   version = "1.0";
 
