@@ -1,4 +1,4 @@
-{ stdenv }: stdenv.mkDerivation {
+{ pkgs }: pkgs.stdenv.mkDerivation {
   pname = "rec";
   version = "1.0";
 
@@ -10,9 +10,16 @@
   ];
 
   installPhase = ''
+    mkdir -p $out
+    cp -R ./* $out/
+
+
     mkdir -p $out/bin
-    cp ./* $out/bin/
-    mv $out/bin/app.sh $out/bin/rec
+
+    cat > $out/bin/rec <<EOF
+    exec $out/app.sh
+    EOF
+
     chmod +x $out/bin/rec
   '';
 }

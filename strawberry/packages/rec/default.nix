@@ -1,5 +1,5 @@
-{ ... }: {
+{ pkgs, ... }: {
   environment.systemPackages = [
-    (import ./package.nix {})
+    (import ./package.nix { inherit pkgs; })
   ];
 }
