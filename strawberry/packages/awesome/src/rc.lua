@@ -230,7 +230,8 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey }, "P",
         function()
-            awful.spawn("pkill -f 'rec'; rec")
+            awful.spawn("pkill -f 'rec'")
+            awful.spawn("rec")
         end,
         {description = "start my rec sript", group = "media"}
     ),
