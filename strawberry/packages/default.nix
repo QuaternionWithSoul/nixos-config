@@ -14,7 +14,6 @@
     ./prism.nix
     ./thunar.nix
     ./tmux.nix
-    ./virtualisation.nix
     ./xorg.nix
   ];
 
