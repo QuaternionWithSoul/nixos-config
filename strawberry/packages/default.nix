@@ -25,7 +25,8 @@
     vlc
     obsidian
     mindustry
-    lutris
+
+    wineWowPackages.full
 
     nix-prefetch-git
     home-manager
