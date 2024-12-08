@@ -28,5 +28,7 @@
     };
   };
 
+  environment.systemPackages = [ pkgs.mesa-demos ];
+
   nixpkgs.config.nvidia.acceptLicense = true;
 }
