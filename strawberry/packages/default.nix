@@ -25,10 +25,7 @@
     vlc
     obsidian
     mindustry
-
-    wineWowPackages.stable
-    wineWowPackages.fonts
-    winetricks
+    lutris
 
     nix-prefetch-git
     home-manager
