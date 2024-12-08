@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ pkgs, pkgs-stable, ...}: {
   imports = [
     ./alacritty
     ./awesome
@@ -23,7 +23,7 @@
     discord
     figma-linux
     vlc
-    obsidian
+    pkgs-stable.obsidian
     mindustry
     lutris
 
