@@ -37,6 +37,7 @@
     pipes
     jellyfin-ffmpeg
     unzip
+    unrar
     btop
     wget
     tree
