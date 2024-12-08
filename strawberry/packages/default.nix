@@ -25,7 +25,6 @@
     vlc
     obsidian
     mindustry
-
     lutris
 
     nix-prefetch-git
