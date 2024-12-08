@@ -26,7 +26,9 @@
     obsidian
     mindustry
 
-    wineWowPackages.full
+    wineWowPackages.stable
+    wineWowPackages.fonts
+    winetricks
 
     nix-prefetch-git
     home-manager
