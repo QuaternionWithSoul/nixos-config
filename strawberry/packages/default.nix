@@ -23,7 +23,7 @@
     discord
     figma-linux
     vlc
-    pkgs-stable.obsidian
+    obsidian
     mindustry
     lutris
 
