@@ -25,6 +25,7 @@
     vlc
     obsidian
     mindustry
+    wineWowPackages.stable
 
     nix-prefetch-git
     home-manager
