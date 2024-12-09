@@ -26,7 +26,7 @@
     obsidian
     mindustry
     transmission_4-gtk
-    sublime
+    sublime4-dev
     eog
 
     lutris
