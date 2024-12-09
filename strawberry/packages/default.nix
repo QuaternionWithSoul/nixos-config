@@ -29,6 +29,8 @@
 
     lutris
     winetricks
+    wineWowPackages.full
+    wineWowPackages.fonts
 
     nix-prefetch-git
     home-manager
