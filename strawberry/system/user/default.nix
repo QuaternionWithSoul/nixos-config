@@ -7,6 +7,7 @@
       "input"
       "audio"
       "video"
+      "disk"
       "networkmanager"
     ];
   };
