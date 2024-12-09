@@ -26,7 +26,7 @@
     obsidian
     mindustry
     transmission_4-gtk
-    kdePackages.kate
+    sublime
     eog
 
     lutris
