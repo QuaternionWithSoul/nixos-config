@@ -12,5 +12,6 @@
     powerline-symbols
     nerd-fonts.symbols-only
     nerd-fonts.jetbrains-mono
+    wineWowPackages.fonts
   ];
 }
