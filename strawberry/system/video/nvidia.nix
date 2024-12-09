@@ -28,7 +28,10 @@
     };
   };
 
-  environment.systemPackages = [ pkgs.mesa-demos ];
+  environment.systemPackages = with pkgs; [
+    mesa-demos
+    vulkan-tools
+  ];
 
   nixpkgs.config.nvidia.acceptLicense = true;
 }
