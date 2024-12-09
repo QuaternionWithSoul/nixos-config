@@ -26,7 +26,8 @@
     obsidian
     mindustry
     transmission_4-gtk
-    sublime4-dev
+    libsForQt5.kate
+    gedit
     eog
 
     lutris
@@ -70,8 +71,5 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    permittedInsecurePackages = [
-      "openssl-1.1.1w"
-    ];
   };
 }
