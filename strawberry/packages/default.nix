@@ -26,6 +26,8 @@
     obsidian
     mindustry
     transmission_4-gtk
+    kdePackages.kate
+    eog
 
     lutris
     winetricks
