@@ -46,8 +46,6 @@
     btop
     wget
     tree
-    openjdk
-    lshw
     cava
     xcolor
   ];
