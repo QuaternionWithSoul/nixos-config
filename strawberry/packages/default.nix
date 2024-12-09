@@ -25,6 +25,7 @@
     vlc
     obsidian
     mindustry
+    lutris
     transmission_4-gtk
 
     nix-prefetch-git
