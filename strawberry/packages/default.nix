@@ -29,6 +29,8 @@
     libsForQt5.kate
     gedit
     eog
+    aseprite
+    blender-hip
 
     lutris
 
