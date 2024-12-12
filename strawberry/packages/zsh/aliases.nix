@@ -17,15 +17,16 @@ in {
 
     ll = "ls -l";
 
-    fstf = "fastfetch";
-    neof = "neofetch";
+    ff = "fastfetch";
+    nf = "neofetch";
     nrdf = "nerdfetch";
-    tft = "fet.sh";
-    pft = "pfetch";
+    fsh = "fet.sh";
+    pf = "pfetch";
+    pp = "pipes.sh";
     clock = "tty-clock -cs -C 5";
 
     cle = "clear";
-    pwrf = "poweroff";
+    pwr = "poweroff";
     rbt = "reboot";
   };
 }

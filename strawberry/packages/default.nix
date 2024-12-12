@@ -21,34 +21,22 @@
     google-chrome
     vscode
     discord
-    figma-linux
-    vlc
     obsidian
-    mindustry
     transmission_4-gtk
     libsForQt5.kate
-    gedit
     eog
+    vlc
+    mindustry
+    lutris
     aseprite
     blender-hip
-
-    lutris
+    figma-linux
 
     nix-prefetch-git
     home-manager
-    fastfetch
-    neofetch
-    fet-sh
-    pfetch-rs
-    tty-clock
-    pipes
     jellyfin-ffmpeg
-    unzip
-    unrar
-    btop
+    p7zip
     wget
-    tree
-    cava
     xcolor
   ];
 
