@@ -20,6 +20,7 @@
   environment.systemPackages = with pkgs; [
     google-chrome
     vscode
+    postman
     discord
     obsidian
     transmission_4-gtk
