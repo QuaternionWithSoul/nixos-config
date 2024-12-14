@@ -278,14 +278,6 @@ globalkeys = gears.table.join(
     ),
 
 
-    awful.key({ modkey }, "s",
-        function()
-            awful.spawn("xdotool key space")
-        end,
-        {description = "space", group = "problem"}
-    ),
-
-
     awful.key({ modkey, "Control" }, "r",
         awesome.restart,
         { description = "reload awesome", group = "awesome" }
