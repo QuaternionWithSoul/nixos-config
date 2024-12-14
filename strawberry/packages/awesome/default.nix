@@ -3,7 +3,6 @@
     pamixer
     brightnessctl
     scrot
-    xdotool
   ];
 
   services.xserver.windowManager.awesome.enable = true;
