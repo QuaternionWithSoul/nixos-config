@@ -15,6 +15,9 @@ in {
       sudo /run/current-system/bin/switch-to-configuration boot
     '';
 
+    wcc = "warp-cli connect";
+    wcd = "warp-cli disconnect";
+
     ll = "ls -l";
 
     ff = "fastfetch";
